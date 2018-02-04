@@ -1,0 +1,34 @@
+16
+
+
+- Read spec
+- Design simple wireframes
+- Investigate SDK spotify
+- Setup project & imports
+- Estimate time
+=> 2    (4 => spotify SDK aar hell)
+
+- Create test app
+- Impl Repository (spotify sdk)
+- Test, fix & validation
+=> 5
+
+
+- Impl Domain use cases
+- Map Repository results to a custom Model
+- Test, fix & validation
+=> 1
+
+- Create final App
+- Impl Presenter
+=> 1
+
+- Design UI interface from wireframes 
+- Impl Design mockup
+=> 4
+
+- Documentation
+- Git process
+=> 2
+
+=====> 15 hours

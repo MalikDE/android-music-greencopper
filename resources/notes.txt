@@ -1,0 +1,47 @@
+Estimated time vs realtime:
+
+- Read spec
+- Design simple wireframes
+- Investigate SDK spotify
+- Setup project & imports
+- Estimate time
+=> estimate 2h    (real 4 => spotify SDK aar)
+
+- Create test app
+- Impl spotify sdk
+- Test, fix & validation
+=> 5h  (10h !! Spotify SDK was really hard to implement)
+
+
+- Impl Domain use cases
+- Map spotify results to a custom Model
+- Test, fix & validation
+=> 1h
+
+- Create final App
+- Impl Presenter
+=> 1h
+
+- Design UI interface from wireframes 
+- Impl Design mockup
+=> 4h 
+
+- Documentation
+- Git process
+=> 2h (1)
+
+=====> estimated 15 hours  
+=====> real 21 hours
+
+● Given more time and resources, how would you improve your application?
+- More genericity to allow the app to grow up and to implement new features
+
+● How did you approach the architecture of the app? What design pattern did you use?
+- I used MVP. A presenter requests data and wrap it to simple object
+
+● How hard was the assignment? How would you rate yourself?
+- Not easy to implement Spotify SDK:
+	- need premium account
+	- Spotify Android SDK is not as documented as Web API. 
+	- unspecified error 
+- Little bit disappointed because I spend a lot of time trying to setup/implement the SDK 

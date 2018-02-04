@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#393939</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#b71c1c</color>
+
+    <color name="track_play">@color/colorPrimary</color>
+    <color name="track_artist">#80000000</color>
+    <color name="track_cover_placeholder">#30000000</color>
+
+    <color name="player_progress">#50000000</color>
+
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GCMusic</string>
+
+    <string name="home_title">Hi, %1$s! Enjoy your top songs :)</string>
+</resources>

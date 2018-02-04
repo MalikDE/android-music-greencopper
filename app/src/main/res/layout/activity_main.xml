@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/home_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Hi, Steve! Enjoy your top songs"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/home_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36"/>
+
+    <ProgressBar
+        android:id="@+id/player_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:progress="0"
+        android:progressBackgroundTint="@color/player_progress"
+        android:progressTint="@color/track_play"
+        app:layout_constraintBottom_toTopOf="@+id/player_play_pause"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_recycler"/>
+
+    <TextView
+        android:id="@+id/player_currentMs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/player_progress"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="@+id/player_progress"
+        app:layout_constraintTop_toBottomOf="@+id/player_progress"
+        tools:text="12:53"/>
+
+    <TextView
+        android:id="@+id/player_maxMs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/player_progress"
+
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/player_progress"
+        app:layout_constraintTop_toBottomOf="@+id/player_progress"
+        tools:text="12:53"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/player_previous"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/player_play_pause"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/player_play_pause"
+        app:layout_constraintTop_toTopOf="@+id/player_play_pause"
+        app:srcCompat="@drawable/ic_fast_rewind_black_24px"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/player_play_pause"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_circle"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/player_previous"
+        app:layout_constraintRight_toLeftOf="@id/player_next"
+        app:layout_constraintTop_toBottomOf="@+id/home_recycler"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/ic_play"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/player_next"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/player_play_pause"
+        app:layout_constraintLeft_toRightOf="@id/player_play_pause"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player_play_pause"
+        app:srcCompat="@drawable/ic_fast_forward_black_24px"/>
+
+
+    <TextView
+        android:id="@+id/player_error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

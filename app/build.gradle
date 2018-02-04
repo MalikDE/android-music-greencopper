@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion defCompileSdkVersion
+    defaultConfig {
+        applicationId "com.mde.myapplication"
+
+        minSdkVersion defMinSdkVersion
+        targetSdkVersion defTargetSdkVersion
+        versionCode defVersionCode
+        versionName defVersionName
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+
+    //Android
+    implementation 'com.android.support:appcompat-v7:' + defSupportSdkVersion
+    implementation 'com.android.support:cardview-v7:' + defSupportSdkVersion
+    implementation 'com.android.support:recyclerview-v7:' + defSupportSdkVersion
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0-beta4'
+
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutine_version"
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    /**
+     * This is a Spotify web service mapping library. This is required to request other info that
+     * Spotify SDK does not provide (UserPrivate, Playlist tracks...)
+     */
+    compile 'com.github.kaaes:spotify-web-api-android:0.4.1'
+
+    //Spotify
+    compile 'com.spotify.android:auth:1.0.0-alpha'
+    compile 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
+}

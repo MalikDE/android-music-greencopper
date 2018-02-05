@@ -55,7 +55,7 @@ class PlayerPresenterImpl(private val view: HomeView) : PlayerPresenter, Player.
 
     override fun authenticateClient() {
         val request = AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI)
-                .setScopes(arrayOf("user-read-private", "playlist-read", "playlist-read-private", "streaming"))
+                .setScopes(arrayOf("user-read-private", "user-top-read", "playlist-read", "playlist-read-private", "streaming"))
                 .build()
         view.displayAuthentication(request)
     }
